@@ -1,0 +1,22 @@
+.space
+{   
+    margin-top: 70px;
+}
+.sidenav
+{    
+    background-color: #f1f1f1;
+    border-radius: 10px;
+}
+.carousel-inner{
+  width:90%;
+  max-height: 290px !important;
+   
+}
+p { 
+   text-indent: 110px;
+}
+.gap
+{
+    margin-top: 20px;
+}
+        
