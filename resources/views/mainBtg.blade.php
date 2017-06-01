@@ -4,8 +4,8 @@
     @include('header'); 
 @endsection
 
-@section('left-pane')
-    @include('left-pane')
+@section('leftPane')
+    @include('leftPane')
 @endsection
 
 @section('content')

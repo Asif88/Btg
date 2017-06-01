@@ -17,8 +17,8 @@ class CreateResourcesTable extends Migration
             $table->increments('id');
             $table->integer('place_id')->unsigned()->default(0);
             $table->foreign('place_id')->references('id')->on('places')->onDelete('cascade');
-            $table->string('path');
-            $table->string('type');
+            $table->string('path')->nullable();
+            $table->string('type')->nullable();
             $table->timestamps();
         });
     }

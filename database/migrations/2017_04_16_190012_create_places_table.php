@@ -15,20 +15,20 @@ class CreatePlacesTable extends Migration
     {
         Schema::create('places', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->string('title');
-            $table->string('facebook');
-            $table->string('twitter');
-            $table->string('g_plus');
-            $table->string('email');            
-            $table->string('street');
-            $table->string('city');
-            $table->string('postal_code');
-            $table->string('country');            
-            $table->string('fax');
-            $table->string('phone_number');
-            $table->string('description');
-            $table->string('coordinates');            
+            $table->string('name')->nullable();
+            $table->string('title')->nullable();
+            $table->string('facebook')->nullable();
+            $table->string('twitter')->nullable();
+            $table->string('g_plus')->nullable();
+            $table->string('email')->nullable();            
+            $table->string('street')->nullable();
+            $table->string('city')->nullable();
+            $table->string('postal_code')->nullable();
+            $table->string('country')->nullable();            
+            $table->string('fax')->nullable();
+            $table->string('phone_number')->nullable();
+            $table->string('description')->nullable();
+            $table->string('coordinates')->nullable();            
             $table->timestamps();
         });
     }

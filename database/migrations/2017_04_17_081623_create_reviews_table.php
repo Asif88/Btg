@@ -19,8 +19,8 @@ class CreateReviewsTable extends Migration
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->integer('place_id')->unsigned()->default(0);
             $table->foreign('place_id')->references('id')->on('places')->onDelete('cascade');
-            $table->integer('score');
-            $table->string('text');
+            $table->integer('score')->nullable();
+            $table->string('text')->nullable();
             $table->timestamps();
         });
     }
