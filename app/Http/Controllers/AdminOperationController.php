@@ -88,8 +88,15 @@ class AdminOperationController extends Controller
      */
     public function destroyCategory($id)
     {
-        $categories = Category::find($id);
-        $categories->delete();
+        $category = Category::find($id);
+        $catPlaces=$category->places;
+        foreach($catPlaces as $place)
+        {
+            $place->delete();
+        }
+            
+        
+        $category->delete();
         return redirect()->action('AdminOperationController@index');
     }
     
