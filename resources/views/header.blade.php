@@ -10,8 +10,8 @@
         </div>
         <div class="collapse navbar-collapse" id="expand">
             <ul class="nav navbar-nav">
-                <li><a href="#">Home</a></li>            
-                <li><a href="#">About</a></li>
+                <li><a href="http://localhost/Btg/public/blade">Home</a></li>            
+                <li><a href="{{ url('/about') }}">About</a></li>
                 <li><a href="#">Videos</a></li>
                 <li><a href="#">Directions</a></li>
                 <li><a href="#">Members</a></li> 

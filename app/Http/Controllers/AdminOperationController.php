@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Category;
 use App\Place;
 use App\Resource;
-
+use Storage;
 class AdminOperationController extends Controller
 {
     /**
@@ -20,16 +20,6 @@ class AdminOperationController extends Controller
         
         
         return view('admin.places',['categories'=>$categories]);     
-        
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
         
     }
 
@@ -132,48 +122,53 @@ class AdminOperationController extends Controller
         $place->city=$request->city;
         $place->postal_code=$request->postal_code;
         $place->country=$request->country;
-        $place->phone_number=$request->phone_number;
+        $place->phone_number=$request->phone_number1;
+        $place->phone_number=$request->phone_number2;
+        $place->phone_number=$request->phone_number3;
+        
         $place->description=$request->description;
         $place->fax=$request->fax;
        
-        $request->file('image1');
-        $request->image1->store('public');
-        $path=$request->image1->path();
+        $image1=$request->file('image1');
+        $request->image1->store("images");
+        //$path=$request->image1->path();
+        $path=$image1->hashName();
         $resource1->path=$path;
         $type="image";
         $resource1->type=$type;
         
-        $request->file('image2');
-        $request->image2->store('public');
-        $path=$request->image2->path();
+        $image2=$request->file('image2');
+        $request->image2->store("images");
+        //$path=$request->image2->path();
+        $path=$image2->hashName();
         $resource2->path=$path;
         $type="image";
         $resource2->type=$type;
         
-        $request->file('image3');
-        $request->image3->store('public');
-        $path=$request->image3->path();
+        $image3=$request->file('image3');
+        $request->image3->store("images");
+        $path=$image3->hashName();
         $resource3->path=$path;
         $type="image";
         $resource3->type=$type;
         
-        $request->file('image4');
-        $request->image4->store('public');
-        $path=$request->image4->path();
+        $image4=$request->file('image4');
+        $request->image4->store("images");
+        $path=$image4->hashName();
         $resource4->path=$path;
         $type="image";
         $resource4->type=$type;
         
-        $request->file('image5');
-        $request->image5->store('public');
-        $path=$request->image5->path();
+        $image5=$request->file('image5');
+        $request->image5->store("images");
+        $path=$image5->hashName();
         $resource5->path=$path;
         $type="image";
         $resource5->type=$type;
         
-        $request->file('video');
-        $request->video->store('public');
-        $path=$request->video->path();
+        $video=$request->file('video');
+        $request->video->store("images");
+        $path=$video->hashName();
         $resource->path=$path;
         $type="video";
         $resource->type=$type;

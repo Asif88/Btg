@@ -13,9 +13,7 @@
         <div class="col-md-2 col-md-offset-3">
             <h2>Place Form</h2>
         </div>
-        <div class="col-md-offset-3 col-md-2">
-            <a href="#">Delete Place</a>
-        </div>
+        
     </div>
 </div>
 <form method="post" enctype="multipart/form-data" action="{{route("store_place",['id'=>$categories->id])}}">
@@ -66,7 +64,7 @@
     </div>
     <div class="col-md-3 col-md-offset-4">
         <label for="number">Phone Number</label>
-        <input type="text" placeholder="Phone Number" name="phone_number"  class="form-control">
+        <input type="text" placeholder="Phone Number" name="phone_number1"  class="form-control">
     </div>
     <div class="col-md-3 col-md-offset-1">
         <label for="coordinates">Coordinates</label>
@@ -74,7 +72,7 @@
     </div>
     <div class="col-md-3 col-md-offset-4">
         <label for="number">Phone number</label>
-        <input type="text" placeholder="Phone Number" name="phone_number" class="form-control">
+        <input type="text" placeholder="Phone Number" name="phone_number2" class="form-control">
     </div>
     <div class="col-md-3 col-md-offset-1">
        <label for="video">Upload Video</label>
@@ -82,7 +80,7 @@
     </div>
     <div class="col-md-3 col-md-offset-4">
         <label for="number">Phone number</label>
-        <input type="text" placeholder="Phone Number" name="phone_number" class="form-control">
+        <input type="text" placeholder="Phone Number" name="phone_number3" class="form-control">
     </div>
     <div class="col-md-3 col-md-offset-1">
        <label for="image">Upload Image1</label>
